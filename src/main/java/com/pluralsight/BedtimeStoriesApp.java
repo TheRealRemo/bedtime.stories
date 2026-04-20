@@ -19,7 +19,8 @@ public class BedtimeStoriesApp {
             FileReader fr = new FileReader(storyName);
             BufferedReader br = new BufferedReader(fr);
             while ((line = br.readLine()) != null) {
-                System.out.println(line);
+                System.out.println(lineNumber +". " + line);
+                lineNumber++;
             }
         } catch (Exception e) {
             System.out.println("Could not open that file. Check the name and try again.");
