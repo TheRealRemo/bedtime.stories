@@ -11,20 +11,21 @@ public class BedtimeStoriesApp {
             Scanner scanner = new Scanner(System.in);
 
             System.out.print("Enter the name of a story: ");
-            String storySelection = scanner.nextLine();
+            String storyName = scanner.nextLine();
 
-            FileReader fr = new FileReader(storySelection);
+            int lineNumber = 1;
+            String line;
+
+            FileReader fr = new FileReader(storyName);
             BufferedReader br = new BufferedReader(fr);
-
-            while ((storySelection = br.readLine()) != null){
-                System.out.println(storySelection);
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
             }
-
         } catch (Exception e) {
-            System.out.println("Oh well!");
-
+            System.out.println("Could not open that file. Check the name and try again.");
 
 
         }
     }
 }
+
